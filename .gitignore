@@ -1,0 +1,14 @@
+*/__pycache__
+/data/
+/others/
+/checkpoints/
+/logs/
+/deps/
+/visual_datas/
+/scripts/
+*.pyc
+*.log
+*.tar.gz
+/run_cmd.sh
+*.nfs*
+tmp.md
