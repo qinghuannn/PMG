@@ -1,0 +1,29 @@
+_target_: src.data.hml3d.HumanML3DDataModule
+
+data_dir: ${paths.data_dir}
+batch_size: 256
+val_batch_size: -1
+test_batch_size: 1
+num_workers: 8
+pin_memory: False
+max_motion_length: 196
+min_motion_length: 24
+max_text_len: 20
+unit_length: 4
+
+njoints: 21
+motion_dim: 255 # hml3d: 251 pmg:255
+motion_repr: pmg
+scale: 1
+
+norm_method: 1
+w_vectorizer_path: ${paths.root_dir}/deps/glove
+dataset_name: kit
+
+repeat_dataset: 25
+
+ 
+keyframe_info:
+  type: random
+  file: val_test_keyframes.txt
+  num: 4

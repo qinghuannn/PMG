@@ -1,0 +1,17 @@
+_target_: src.models.nets.denoiser.Denoiser
+motion_dim: ${data.motion_dim}
+model_dim: 512
+text_feat_dim: 512
+time_embed_dim: 256
+max_motion_length: 256
+max_text_length: 128
+num_heads: 8
+dim_feedforward: 2048
+dropout: 0.1
+num_layers: 4
+pos_emb: cos
+gm_proj: true
+norm_first: False
+input_norm: true
+c: 4
+use_mask_token: True

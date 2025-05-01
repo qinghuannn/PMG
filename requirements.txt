@@ -1,0 +1,52 @@
+# python==3.10
+# --------- pytorch --------- #
+# torch==2.1.0
+# torchvision==0.16.0
+torchmetrics==1.2.0
+lightning==2.1.0
+lightning-cloud==0.5.41
+lightning-utilities==0.9.0
+
+# --------- hydra --------- #
+hydra-core==1.3.2
+hydra-colorlog==1.2.0
+hydra-optuna-sweeper==1.2.0
+
+# --------- loggers --------- #
+wandb
+
+# --------- others --------- #
+rootutils       # standardizing the project root setup
+pre-commit      # hooks for applying linters on commit
+rich            # beautiful text formatting in terminal
+pytest          # tests
+# sh            # for running bash commands in some tests (linux/macos only)
+
+
+# ------------ others ----------#
+transformers==4.34.0
+# diffusers==0.29.0
+sentence-transformers==2.2.2
+sentencepiece==0.1.99
+# huggingface-hub==0.23.2
+# clip==1.0
+git+https://github.com/openai/CLIP.git
+smplx==0.1.28
+spacy==3.7.1
+scipy==1.11.1
+einops==0.7.0
+tensorboardX
+openpyxl
+thop
+# ---------- MoBert ------------
+pandas
+scikit-learn==1.2.2
+
+
+#---------- Render motion ------------
+bpy
+imageio
+imageio-ffmpeg
+matplotlib
+h5py
+git+https://github.com/mattloper/chumpy

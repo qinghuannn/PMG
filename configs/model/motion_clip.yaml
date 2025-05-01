@@ -1,0 +1,29 @@
+_target_: src.models.motion_clip.MotionCLIP
+
+motion_clip:
+  _target_: src.models.nets.motion_clip.MotionCLIP
+  motion_dim: ${data.motion_dim}
+  model_dim: 512
+  output_dim: 512
+  patch_size: 1
+  num_layers: 8
+  num_heads: 8
+  dropout: 0.3
+  pretrain: True
+  text_encoder: roberta
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.0001
+  weight_decay: 0.0
+
+lr_scheduler: False
+warmup: 0
+only_train_mtenc: 10
+
+ocpm: false
+
+compile: false
+
+replicate_times: 20

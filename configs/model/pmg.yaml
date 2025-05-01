@@ -1,0 +1,35 @@
+defaults:
+    - default
+    - text_encoder: clip
+    - denoiser: denoiser
+    - optimizer: adamw 
+#    - lr_scheduler: None
+    - noise_scheduler: DDPM.yaml
+    - sample_scheduler: UniPC
+
+_target_: src.models.pmg.PMG
+
+text_replace_prob: 0.1
+guidance_scale: 3
+k_step: 3
+num_keyframes: ${data.keyframe_info.num}
+mask_prior: 1e-4
+motion_repr: ${data.motion_repr}
+step_num: 20
+is_mask_init_prior: True
+
+ema:
+  use_ema: true
+  ema_decay: 0.99
+  ema_start: 1000
+  ema_update: 10
+
+
+  ema_prior: 1 # set to 1 to use ema prior 
+  prior_start: 80
+  step_range: 100
+  prior_prob: 0.3
+
+
+
+

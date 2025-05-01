@@ -1,0 +1,21 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: hml3d # choose datamodule with `test_dataloader()` for evaluation
+  - model: motion_clip
+  - logger: null
+  - trainer: gpu
+  - paths: default
+  - extras: default
+  - hydra: default
+
+task_name: "eval_motionclip"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+ckpt_path: ???
+
+# seed for random number generators in pytorch, numpy and python.random
+seed: null

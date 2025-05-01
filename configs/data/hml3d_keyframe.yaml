@@ -1,0 +1,29 @@
+_target_: src.data.hml3d.HumanML3DKeyframeDataModule
+
+data_dir: ${paths.data_dir}
+batch_size: 256
+val_batch_size: -1
+test_batch_size: 1
+num_workers: 8
+pin_memory: False
+max_motion_length: 196
+min_motion_length: 40
+max_text_len: 20
+unit_length: 4
+
+njoints: 22
+motion_dim: 267 # hml3d: 263 pmg: 267
+motion_repr: pmg 
+scale: 1
+
+norm_method: 1
+
+w_vectorizer_path: ${paths.root_dir}/deps/glove
+dataset_name: hml3d
+
+
+keyframe_info:
+  type: gt
+  file: label.xlsx
+  num: 2
+flip_keyframe: True

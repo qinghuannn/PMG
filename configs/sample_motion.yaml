@@ -1,0 +1,40 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: hml3d # choose datamodule with `test_dataloader()` for evaluation
+  - model: pmg
+  - logger: tensorboard
+  - trainer: gpu
+  - paths: default
+  - extras: default
+  - hydra: default
+
+task_name: "visual"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+ckpt_path: "./checkpoints/pmg-hml3d.ckpt"
+
+# seed for random number generators in pytorch, numpy and python.random
+seed: null
+
+data_dir: "./data/HumanML3D"
+
+save_path: "./visual_datas/joints"
+
+sample_id: "000534"
+
+keyframe: "25-56"
+
+time_range: "0,3"
+
+gen_type: "tf2m" # tf2m: text-frame-to-motion or mi: motion inpainting
+
+repeats: 10
+
+device: "0"
+
+
+

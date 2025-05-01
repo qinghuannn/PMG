@@ -1,0 +1,11 @@
+_target_: diffusers.DDIMScheduler
+num_train_timesteps: ${model.noise_scheduler.num_train_timesteps}
+beta_start: ${model.noise_scheduler.beta_start}
+beta_end: ${model.noise_scheduler.beta_end}
+# beta_start and beta_end will be not activated when using squaredcos_cap_v2
+beta_schedule: ${model.noise_scheduler.beta_schedule}
+#variance_type: "fixed_small"
+# need to conduct ablation studies
+clip_sample: ${model.noise_scheduler.clip_sample}
+clip_sample_range: 150
+prediction_type: epsilon
