@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
- @File    : clip.py
- @Time    : 2023/4/26 11:01
- @Author  : Ling-An Zeng
- @Email   : linganzeng@gmail.com
- @Software: PyCharm
-"""
 from typing import List
 
 import torch
